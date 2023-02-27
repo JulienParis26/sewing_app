@@ -48,6 +48,32 @@ public class CacheConfiguration {
             createCache(cm, com.mycompany.myapp.domain.User.class.getName());
             createCache(cm, com.mycompany.myapp.domain.Authority.class.getName());
             createCache(cm, com.mycompany.myapp.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.mycompany.myapp.domain.FabricEditor.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.FabricEditor.class.getName() + ".fabrics");
+            createCache(cm, com.mycompany.myapp.domain.Fabric.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.Fabric.class.getName() + ".fabricTypes");
+            createCache(cm, com.mycompany.myapp.domain.Fabric.class.getName() + ".materials");
+            createCache(cm, com.mycompany.myapp.domain.Fabric.class.getName() + ".uses");
+            createCache(cm, com.mycompany.myapp.domain.Fabric.class.getName() + ".maintenances");
+            createCache(cm, com.mycompany.myapp.domain.Fabric.class.getName() + ".labels");
+            createCache(cm, com.mycompany.myapp.domain.Fabric.class.getName() + ".sellers");
+            createCache(cm, com.mycompany.myapp.domain.Fabric.class.getName() + ".projects");
+            createCache(cm, com.mycompany.myapp.domain.FabricSeller.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.FabricSeller.class.getName() + ".fabrics");
+            createCache(cm, com.mycompany.myapp.domain.Materials.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.Materials.class.getName() + ".fabrics");
+            createCache(cm, com.mycompany.myapp.domain.FabricTypes.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.FabricTypes.class.getName() + ".fabrics");
+            createCache(cm, com.mycompany.myapp.domain.FabricUses.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.FabricUses.class.getName() + ".fabrics");
+            createCache(cm, com.mycompany.myapp.domain.FabricLabels.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.FabricLabels.class.getName() + ".fabrics");
+            createCache(cm, com.mycompany.myapp.domain.FabricMaintenance.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.FabricMaintenance.class.getName() + ".fabrics");
+            createCache(cm, com.mycompany.myapp.domain.Patron.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.Patron.class.getName() + ".projects");
+            createCache(cm, com.mycompany.myapp.domain.Project.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.Project.class.getName() + ".fabrics");
             // jhipster-needle-ehcache-add-entry
         };
     }
