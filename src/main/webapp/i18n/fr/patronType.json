@@ -1,0 +1,10 @@
+{
+  "sewingappApp": {
+    "PatronType": {
+      "null": "",
+      "PAPER": "PAPER",
+      "PDF": "PDF",
+      "ONLINE": "ONLINE"
+    }
+  }
+}

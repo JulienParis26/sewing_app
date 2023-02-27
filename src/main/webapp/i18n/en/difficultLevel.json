@@ -1,0 +1,10 @@
+{
+  "sewingappApp": {
+    "DifficultLevel": {
+      "null": "",
+      "BEGINNER": "BEGINNER",
+      "INTERMEDIATE": "INTERMEDIATE",
+      "EXPERT": "EXPERT"
+    }
+  }
+}
