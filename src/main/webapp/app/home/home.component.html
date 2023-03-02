@@ -1,80 +1,134 @@
 <div class='row'>
-  <div class='col-md-3'>
-    <span class='hipster img-fluid rounded'></span>
+  <div class='col-md-9'>
+    <h1 class='display-4'>Bienvenue sur le site de JU' fait de la couture</h1>
+
+    <p class='lead'>Passionnée de couture, je couds pour ma famille et moi depuis 8 ans maintenant.</p>
+    <p class='lead'>Je couds mon dressing, celui de mon mari et de mes enfants depuis 3 ans, nous n'achetons presque
+      plus de vêtements dans les magasins de prêt à porter et je partage avec vous mes aventures "couturesques" !</p>
+    <p class='lead'>J'aimerais rendre à la communauté couture, à mon petit niveau, tout ce qu'elle m'a apporté et
+      appris ; et espère que mon approche décomplexée de la couture donne envie au plus grand nombre de se lancer dans
+      la fabrication de vêtements.</p>
   </div>
 
-  <div class='col-md-9'>
-    <h1 class='display-4'>Bienvenue sur Sewing App</h1>
+  <div class='col-md-9' [ngSwitch]='account !== null' *ngIf='account'>
+    <h1 class='display-4'>Dashboard</h1>
 
     <p class='lead'>Page d'accueil</p>
 
     <div [ngSwitch]='account !== null'>
-      <div class='alert alert-success' *ngSwitchCase='true'>
-        <span id='home-logged-message' *ngIf='account' jhiTranslate='home.logged.message'
-              [translateValues]='{ username: account.login }'
-        >Vous êtes connecté en tant que "{{ account.login }}".</span
-        >
+      <!--      <div class='alert alert-success' *ngSwitchCase='true'>-->
+      <!--        <span id='home-logged-message' *ngIf='account' jhiTranslate='home.logged.message'-->
+      <!--              [translateValues]='{ username: account.login }'-->
+      <!--        >Bienvenue sur ton compte "{{ account.login }}".</span-->
+      <!--        >-->
+      <!--      </div>-->
+
+      <div class='cards' [ngSwitch]='account !== null'>
+        <div *ngIf='account'>
+          <!--        1ere card-->
+          <mat-card class='example-card'>
+            <mat-card-header>
+              <div mat-card-avatar class='example-header-image'></div>
+              <mat-card-title>Podcast</mat-card-title>
+              <mat-card-subtitle>Bilan couture Janvier 2023</mat-card-subtitle>
+            </mat-card-header>
+            <!--          <img mat-card-image src='../../content/images/first_video.png' alt='logo'>-->
+            <iframe mat-card-image width='516' height='315' [src]='getSafeUrl()'
+                    title='Podcast couture - Bilan couture Janvier 2023 - 17 projets cousus' frameborder='0'
+                    allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+                    allowfullscreen></iframe>
+            <!--        <mat-card-content>-->
+            <!--          <p>-->
+            <!--            Test couture.-->
+            <!--          </p>-->
+            <!--        </mat-card-content>-->
+            <mat-card-actions>
+              <div class='example-button-row'>
+                <button mat-flat-button color='warn' aria-label='Like'>
+                  Like
+                </button>
+                <a mat-flat-button href='https://www.youtube.com/@jufait/videos' target='_blank' color='accent'
+                   aria-label='See'>
+                  En voir plus
+                </a>
+              </div>
+            </mat-card-actions>
+          </mat-card>
+          <!--        2eme card-->
+          <mat-card class='example-card'>
+            <mat-card-header>
+              <div mat-card-avatar class='example-header-image'></div>
+              <mat-card-title>Podcast</mat-card-title>
+              <mat-card-subtitle>Bilan couture Janvier 2023</mat-card-subtitle>
+            </mat-card-header>
+            <!--          <img mat-card-image src='../../content/images/first_video.png' alt='logo'>-->
+            <iframe mat-card-image width='516' height='315' [src]='getSafeUrl()'
+                    title='Podcast couture - Bilan couture Janvier 2023 - 17 projets cousus' frameborder='0'
+                    allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+                    allowfullscreen></iframe>
+            <mat-card-actions>
+              <div class='example-button-row'>
+                <button mat-flat-button color='warn' aria-label='Like'>
+                  Like
+                </button>
+                <a mat-flat-button href='https://www.youtube.com/@jufait/videos' target='_blank' color='accent'
+                   aria-label='See'>
+                  En voir plus
+                </a>
+              </div>
+            </mat-card-actions>
+          </mat-card>
+          <!--        3eme card-->
+          <mat-card class='example-card'>
+            <mat-card-header>
+              <div mat-card-avatar class='example-header-image'></div>
+              <mat-card-title>Podcast</mat-card-title>
+              <mat-card-subtitle>Bilan couture Janvier 2023</mat-card-subtitle>
+            </mat-card-header>
+            <!--          <img mat-card-image src='../../content/images/first_video.png' alt='logo'>-->
+            <iframe mat-card-image width='516' height='315' [src]='getSafeUrl()'
+                    title='Podcast couture - Bilan couture Janvier 2023 - 17 projets cousus' frameborder='0'
+                    allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+                    allowfullscreen></iframe>
+            <mat-card-actions>
+              <div class='example-button-row'>
+                <button mat-flat-button color='warn' aria-label='Like'>
+                  Like
+                </button>
+                <a mat-flat-button href='https://www.youtube.com/@jufait/videos' target='_blank' color='accent'
+                   aria-label='See'>
+                  En voir plus
+                </a>
+              </div>
+            </mat-card-actions>
+          </mat-card>
+          <!--        4eme card-->
+          <mat-card class='example-card'>
+            <mat-card-header>
+              <div mat-card-avatar class='example-header-image'></div>
+              <mat-card-title>Podcast</mat-card-title>
+              <mat-card-subtitle>Bilan couture Janvier 2023</mat-card-subtitle>
+            </mat-card-header>
+            <!--          <img mat-card-image src='../../content/images/first_video.png' alt='logo'>-->
+            <iframe mat-card-image width='516' height='315' [src]='getSafeUrl()'
+                    title='Podcast couture - Bilan couture Janvier 2023 - 17 projets cousus' frameborder='0'
+                    allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+                    allowfullscreen></iframe>
+            <mat-card-actions>
+              <div class='example-button-row'>
+                <button mat-flat-button color='warn' aria-label='Like'>
+                  Like
+                </button>
+                <a mat-flat-button href='https://www.youtube.com/@jufait/videos' target='_blank' color='accent'
+                   aria-label='See'>
+                  En voir plus
+                </a>
+              </div>
+            </mat-card-actions>
+          </mat-card>
+        </div>
       </div>
+
     </div>
   </div>
 </div>
-<!--      <div class="alert alert-warning" *ngSwitchCase="false">-->
-<!--        <span jhiTranslate="global.messages.info.authenticated.prefix">Si vous voulez vous </span>-->
-<!--        <a class="alert-link" (click)="login()" jhiTranslate="global.messages.info.authenticated.link">connecter</a-->
-<!--        ><span jhiTranslate="global.messages.info.authenticated.suffix"-->
-<!--          >, vous pouvez utiliser les comptes par défaut : <br />-->
-<!--          - Administrateur (nom d'utilisateur="admin" et mot de passe ="admin") <br />-->
-<!--          - Utilisateur (nom d'utilisateur="user" et mot de passe ="user").</span-->
-<!--        >-->
-<!--      </div>-->
-
-<!--      <div class="alert alert-warning" *ngSwitchCase="false">-->
-<!--        <span jhiTranslate="global.messages.info.register.noaccount">Vous n'avez pas encore de compte ?</span>&nbsp;-->
-<!--        <a class="alert-link" routerLink="account/register" jhiTranslate="global.messages.info.register.link">Créer un compte</a>-->
-<!--      </div>-->
-<!--    </div>-->
-
-<!--    <p jhiTranslate="home.question">Si vous avez des questions à propos de JHipster :</p>-->
-
-<!--    <ul>-->
-<!--      <li>-->
-<!--        <a href="https://www.jhipster.tech/" target="_blank" rel="noopener noreferrer" jhiTranslate="home.link.homepage"-->
-<!--          >Page d'accueil de JHipster</a-->
-<!--        >-->
-<!--      </li>-->
-<!--      <li>-->
-<!--        <a-->
-<!--          href="https://stackoverflow.com/tags/jhipster/info"-->
-<!--          target="_blank"-->
-<!--          rel="noopener noreferrer"-->
-<!--          jhiTranslate="home.link.stackoverflow"-->
-<!--          >JHipster sur Stack Overflow</a-->
-<!--        >-->
-<!--      </li>-->
-<!--      <li>-->
-<!--        <a-->
-<!--          href="https://github.com/jhipster/generator-jhipster/issues?state=open"-->
-<!--          target="_blank"-->
-<!--          rel="noopener noreferrer"-->
-<!--          jhiTranslate="home.link.bugtracker"-->
-<!--          >JHipster bug tracker</a-->
-<!--        >-->
-<!--      </li>-->
-<!--      <li>-->
-<!--        <a href="https://gitter.im/jhipster/generator-jhipster" target="_blank" rel="noopener noreferrer" jhiTranslate="home.link.chat"-->
-<!--          >JHipster public chat room</a-->
-<!--        >-->
-<!--      </li>-->
-<!--      <li>-->
-<!--        <a href="https://twitter.com/jhipster" target="_blank" rel="noopener noreferrer" jhiTranslate="home.link.follow"-->
-<!--          >Suivez @jhipster sur Twitter</a-->
-<!--        >-->
-<!--      </li>-->
-<!--    </ul>-->
-
-<!--    <p>-->
-<!--      <span jhiTranslate="home.like">Si vous aimez JHipster, donnez nous une étoile sur</span>-->
-<!--      <a href="https://github.com/jhipster/generator-jhipster" target="_blank" rel="noopener noreferrer" jhiTranslate="home.github"-->
-<!--        >GitHub </a-->
-<!--      >!-->
-<!--    </p>-->

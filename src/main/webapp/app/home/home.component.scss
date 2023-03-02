@@ -2,6 +2,26 @@
 Main page styles
 ========================================================================== */
 
+.example-button-row {
+  display: table-cell;
+  max-width: 600px;
+}
+
+.cards {
+  padding: 50px;
+}
+
+.example-card {
+  max-width: 400px;
+  display: inline-block;
+  margin-right: 50px;
+}
+
+.example-header-image {
+  background-image: url('../../content/images/logo-ju.jpg');
+  background-size: cover;
+}
+
 .hipster {
   display: inline-block;
   width: 347px;
