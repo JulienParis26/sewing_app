@@ -8,9 +8,12 @@ import { FabricRoutingModule } from './route/fabric-routing.module';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatSelectModule } from '@angular/material/select';
+import { MatOptionModule } from '@angular/material/core';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @NgModule({
-  imports: [SharedModule, FabricRoutingModule, MatInputModule, MatButtonModule, MatIconModule],
+  imports: [SharedModule, FabricRoutingModule, MatInputModule, MatButtonModule, MatIconModule, MatSelectModule, MatOptionModule, MatCheckboxModule],
   declarations: [FabricComponent, FabricDetailComponent, FabricUpdateComponent, FabricDeleteDialogComponent],
 })
 export class FabricModule {}

@@ -31,6 +31,8 @@ export class FabricUpdateComponent implements OnInit {
   isSaving = false;
   fabric: IFabric | null = null;
 
+  value = 'Clear me';
+
   fabricEditorsSharedCollection: IFabricEditor[] = [];
   fabricTypesSharedCollection: IFabricTypes[] = [];
   materialsSharedCollection: IMaterials[] = [];
